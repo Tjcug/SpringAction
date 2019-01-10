@@ -3,8 +3,7 @@ package com.hust.edu.controller;
 import com.hust.edu.pojo.Airport;
 import com.hust.edu.service.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.WebApplicationContextUtils;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,8 +25,7 @@ public class AirportServelt extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        WebApplicationContext applicationContext= WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
-        airportService = applicationContext.getBean("airportService", AirportService.class);
+        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,getServletContext());
         super.init();
     }
 
@@ -35,6 +33,9 @@ public class AirportServelt extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req,resp);
     }
+
+
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

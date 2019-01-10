@@ -13,7 +13,7 @@
     <!--定义可以通过注解的形式扫描包-->
     <context:component-scan base-package="com.hust"/>
 
-    <!--idb表示获取到对象的标识 clsss创建哪个对象-->
+    <!--index表示获取到对象的标识 clsss创建哪个对象-->
     <bean id="peo" class="com.hust.edu.pojo.People">
         <!--ref表示引用另一个bean vaule表示基本数据类型或者String-->
         <constructor-arg index="1" type="int" value="1"></constructor-arg>

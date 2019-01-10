@@ -9,9 +9,10 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>spring-IOC</module>
+    <module>spring-IOC-XML</module>
     <module>spring-mybatis</module>
     <module>spring-Test</module>
+    <module>spring-IOC-Java</module>
   </modules>
 
   <name>springAction</name>
