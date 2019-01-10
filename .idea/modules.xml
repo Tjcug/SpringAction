@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-AOP-Aspect/spring-AOP-Aspect.iml" filepath="$PROJECT_DIR$/spring-AOP-Aspect/spring-AOP-Aspect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-AOP-Schema/spring-AOP-Schema.iml" filepath="$PROJECT_DIR$/spring-AOP-Schema/spring-AOP-Schema.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-IOC-Java/spring-IOC-Java.iml" filepath="$PROJECT_DIR$/spring-IOC-Java/spring-IOC-Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-IOC-XML/spring-IOC-XML.iml" filepath="$PROJECT_DIR$/spring-IOC-XML/spring-IOC-XML.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-Test/spring-Test.iml" filepath="$PROJECT_DIR$/spring-Test/spring-Test.iml" />

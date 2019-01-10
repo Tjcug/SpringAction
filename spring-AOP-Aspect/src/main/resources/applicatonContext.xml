@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	http://www.springframework.org/schema/mvc   http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+    http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-2.5.xsd " >
+
+    <bean id="mythrows" class="com.hust.edu.advice.MyAdvice"></bean>
+    <bean id="myParamthrows" class="com.hust.edu.advice.MyParamAdvice"></bean>
+
+    <!--AOP配置-->
+    <aop:config>
+        <!--配置切点-->
+        <aop:pointcut id="pointcut" expression="execution(* com.hust.edu.pointcut.Worker.*(..))" />
+        <aop:pointcut id="parampointcut" expression="execution(* com.hust.edu.pointcut.ParamWorker.doSomething(String,int)) and args(name,time)" />
+
+        <aop:pointcut id="parampointcut2" expression="execution(* com.hust.edu.pointcut.ParamWorker.doSomething(String)) and args(name)" />
+
+        <!--配置切面-->
+        <aop:aspect ref="mythrows">
+            <aop:after-throwing method="myExeception" pointcut-ref="pointcut" throwing="e"/>
+            <aop:before method="beforeCall" pointcut-ref="pointcut"/>
+            <aop:after method="afterCall" pointcut-ref="pointcut"/>
+            <aop:after-returning method="afterCallReturning" pointcut-ref="pointcut"/>
+            <aop:around method="aroundCall" pointcut-ref="pointcut"/>
+        </aop:aspect>
+
+        <!--配置切面-->
+        <aop:aspect ref="myParamthrows">
+            <!--<aop:after-throwing method="myExeception" pointcut-ref="parampointcut" throwing="e"/>-->
+            <aop:before method="beforeCall" pointcut-ref="parampointcut" arg-names="name,time" />
+            <aop:before method="beforeCal2" pointcut-ref="parampointcut2" arg-names="name" />
+            <!--<aop:after method="afterCall" pointcut-ref="pointcut"/>-->
+            <!--<aop:after-returning method="afterCallReturning" pointcut-ref="pointcut"/>-->
+            <!--<aop:around method="aroundCall" pointcut-ref="pointcut"/>-->
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="worker" class="com.hust.edu.pointcut.Worker"/>
+
+    <bean id="paramWorker" class="com.hust.edu.pointcut.ParamWorker"/>
+
+</beans>

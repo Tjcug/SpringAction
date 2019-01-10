@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-AOP-Aspect" />
+        <module name="spring-AOP-Schema" />
         <module name="spring-IOC-Java" />
         <module name="spring-IOC-XML" />
         <module name="spring-mybatis" />
@@ -13,6 +15,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring-AOP" target="1.7" />
+      <module name="spring-AOP-Aspect" target="1.7" />
+      <module name="spring-AOP-Schema" target="1.7" />
       <module name="spring-IOC" target="1.7" />
       <module name="spring-IOC-Java" target="1.7" />
       <module name="spring-IOC-XML" target="1.7" />

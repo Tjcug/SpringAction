@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	http://www.springframework.org/schema/mvc   http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+    http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-2.5.xsd " >
+
+    <!--定义可以通过注解的形式扫描包-->
+    <context:component-scan base-package="com.hust"/>
+
+    <!--配置通知类对象，在切面中引入-->
+    <bean id="beforeAdvice" class="com.hust.edu.advice.BeforeAdvice"/>
+    <bean id="afterAdvice" class="com.hust.edu.advice.AfterAdvice"/>
+    <bean id="aroundAdvice" class="com.hust.edu.advice.AroundAdvice"/>
+
+    <bean id="worker" class="com.hust.edu.pointcut.Worker"/>
+
+    <bean id="mythrows" class="com.hust.edu.advice.ThrowAdvice"></bean>
+
+    <!--配置切面-->
+    <aop:config>
+        <!--配置切点-->
+        <aop:pointcut id="pointcut" expression="execution(* com.hust.edu.pointcut.Worker.*(..))" />
+        <!--配置前置通知-->
+        <aop:advisor advice-ref="beforeAdvice" pointcut-ref="pointcut"/>
+        <!--配置后置通知-->
+        <aop:advisor advice-ref="afterAdvice" pointcut-ref="pointcut"/>
+        <!--配置异常通知-->
+        <aop:advisor advice-ref="mythrows" pointcut-ref="pointcut"/>
+        <!--配置环绕通知-->
+        <!--<aop:advisor advice-ref="aroundAdvice" pointcut-ref="pointcut"></aop:advisor>-->
+    </aop:config>
+
+    <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy>
+</beans>
