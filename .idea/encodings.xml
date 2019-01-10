@@ -6,6 +6,9 @@
     <file url="file://$PROJECT_DIR$/spring-IOC" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-Test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java/com/hust/edu/mapper/AirplaneMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java/com/hust/edu/pojo" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/resources/mapper/AirplaneMapper.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
