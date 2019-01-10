@@ -1,11 +1,11 @@
-package com.hust.edu.factory;
+package com.hust.edu.constructor.factory;
 
 import com.hust.edu.pojo.People;
 import com.hust.edu.pojo.PeopleA;
 import com.hust.edu.pojo.PeopleB;
 
 /**
- * locate com.hust.edu.factory
+ * locate com.hust.edu.constructor.factory
  * Created by MasterTj on 2019/1/9.
  */
 public class PeopleFactory {

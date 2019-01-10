@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-IOC" />
+        <module name="spring-mybatis" />
+        <module name="spring-Test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-IOC" target="1.7" />
+      <module name="spring-mybatis" target="1.7" />
+      <module name="spring-Test" target="1.7" />
       <module name="springAction" target="1.8" />
     </bytecodeTargetLevel>
   </component>

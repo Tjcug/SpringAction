@@ -1,26 +1,29 @@
 package com.hust.edu.pojo;
 
+import java.util.List;
+
 /**
- * locate com.hust.edu
- * Created by MasterTj on 2019/1/9.
+ * locate com.hust.edu.pojo
+ * Created by MasterTj on 2019/1/10.
  */
-public class People {
+public class PeopleList {
     private int id;
     private String name;
+    private List<String> list;
 
-    public People(int id, String name) {
+    public PeopleList(int id, String name) {
         this.id = id;
         this.name = name;
         System.out.println("有参数构造方法1 name:"+name+" id:"+id);
     }
 
-    public People(String name, int id) {
+    public PeopleList(String name, int id) {
         this.id = id;
         this.name = name;
         System.out.println("有参数构造方法2 name:"+name+" id:"+id);
     }
 
-    public People() {
+    public PeopleList() {
         System.out.println("执行默认的构造方法");
     }
 
@@ -42,11 +45,20 @@ public class People {
         this.name = name;
     }
 
+    public List<String> getList() {
+        return list;
+    }
+
+    public void setList(List<String> list) {
+        this.list = list;
+    }
+
     @Override
     public String toString() {
-        return "People{" +
+        return "PeopleList{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", list=" + list +
                 '}';
     }
 }

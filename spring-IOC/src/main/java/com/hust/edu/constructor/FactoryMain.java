@@ -1,4 +1,4 @@
-package com.hust.edu;
+package com.hust.edu.constructor;
 
 import com.hust.edu.pojo.People;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +14,7 @@ public class FactoryMain {
          *  实例工厂测试代码
          */
         ApplicationContext applicationContext=null;
-        applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
+        applicationContext=new ClassPathXmlApplicationContext("constructor.xml");
         People peo1 = (People) applicationContext.getBean("peo1");
         People peo2 = (People) applicationContext.getBean("peo2");
         System.out.println(peo1);

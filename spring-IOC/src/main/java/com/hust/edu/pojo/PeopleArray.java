@@ -1,26 +1,29 @@
 package com.hust.edu.pojo;
 
+import java.util.Arrays;
+
 /**
  * locate com.hust.edu
  * Created by MasterTj on 2019/1/9.
  */
-public class People {
+public class PeopleArray {
     private int id;
     private String name;
+    private String[] strings;
 
-    public People(int id, String name) {
+    public PeopleArray(int id, String name) {
         this.id = id;
         this.name = name;
         System.out.println("有参数构造方法1 name:"+name+" id:"+id);
     }
 
-    public People(String name, int id) {
+    public PeopleArray(String name, int id) {
         this.id = id;
         this.name = name;
         System.out.println("有参数构造方法2 name:"+name+" id:"+id);
     }
 
-    public People() {
+    public PeopleArray() {
         System.out.println("执行默认的构造方法");
     }
 
@@ -42,11 +45,20 @@ public class People {
         this.name = name;
     }
 
+    public String[] getStrings() {
+        return strings;
+    }
+
+    public void setStrings(String[] strings) {
+        this.strings = strings;
+    }
+
     @Override
     public String toString() {
-        return "People{" +
+        return "PeopleArray{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", strings=" + Arrays.toString(strings) +
                 '}';
     }
 }
