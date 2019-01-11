@@ -11,33 +11,37 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Aspect
-public class MyAdvice{
+public class BetterMyAdvice {
+    @Pointcut("execution(* com.hust.edu.pointcut.Worker.doSomething(String)) && args(name)")
+    public void doSomething(String name){
 
-    @AfterThrowing(value = "execution(* com.hust.edu.pointcut.Worker.doSomething(String))", throwing = "e")
+    }
+
+    @AfterThrowing(value = "doSomething(String)", throwing = "e")
     public void myExeception(Exception e){
         System.out.println("---------执行异常通知--------");
         System.out.println(e.getMessage());
     }
 
-    @Before(value = "execution(* com.hust.edu.pointcut.Worker.doSomething(String)) && args(name)")
+    @Before(value = "doSomething(String) && args(name)")
     public void beforeCall(String name){
         System.out.println("name: "+name);
         System.out.println("---------执行前置--------");
     }
 
-    @After(value = "execution(* com.hust.edu.pointcut.Worker.doSomething(String)) && args(name)")
+    @After(value = "doSomething(String) && args(name)")
     public void afterCall(String name){
         System.out.println("name: "+name);
         System.out.println("---------执行后置--------");
     }
 
-    @AfterReturning(value = "execution(* com.hust.edu.pointcut.Worker.doSomething(String)) && args(name)")
+    @AfterReturning(value = "doSomething(String) && args(name)")
     public void afterCallReturning(String name){
         System.out.println("name: "+name);
         System.out.println("---------后置通知Returning--------");
     }
 
-    @Around(value = "execution(* com.hust.edu.pointcut.Worker.doSomething(String)) && args(name)")
+    @Around(value = "doSomething(String) && args(name)")
     public Object aroundCall(ProceedingJoinPoint joinPoint,String name) throws Throwable {
         System.out.println("---------执行环绕前置--------");
         Object proceed = joinPoint.proceed();
