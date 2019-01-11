@@ -1,11 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="spring-mybatis:Web exploded">
-    <output-path>$PROJECT_DIR$/spring-mybatis/target</output-path>
+  <artifact type="exploded-war" name="spring-Transaction:Web exploded">
+    <output-path>$PROJECT_DIR$/spring-Transaction/target</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="spring-mybatis/web/Web" />
+      <element id="javaee-facet-resources" facet="spring-Transaction/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="spring-mybatis" />
           <element id="module-output" name="spring-Transaction" />
         </element>
         <element id="directory" name="lib">

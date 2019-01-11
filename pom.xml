@@ -17,6 +17,7 @@
     <module>spring-AOP-Aspect</module>
     <module>spring-AOP-Annotation</module>
     <module>spring-MVC</module>
+      <module>spring-Transaction</module>
   </modules>
 
   <name>springAction</name>

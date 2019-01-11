@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PeopleAutowired {
 
-    @Autowired
+    @Autowired()
     @Qualifier("peopleB")
     private People people;
 

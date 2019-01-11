@@ -13,13 +13,20 @@
     <!--定义可以通过注解的形式扫描包-->
     <context:component-scan base-package="com.hust"/>
 
-    <!-- 加载配置文件，支持xml的方式-->
-    <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
-        <property name="locations">
-            <array>
-                <value>classpath:context.properties</value>
-            </array>
-        </property>
-    </bean>
+    <!--属性配置文件配置-->
+    <context:property-placeholder location="classpath*:context.properties"></context:property-placeholder>
 
+    <!-- 加载配置文件，支持xml的方式-->
+    <!--<bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">-->
+        <!--<property name="locations">-->
+            <!--<array>-->
+                <!--<value>classpath:context.properties</value>-->
+            <!--</array>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <bean id="loginTable" class="com.hust.edu.prop.LoginTable">
+        <property name="password" value="${password}"></property>
+        <property name="username" value="${username}"></property>
+    </bean>
 </beans>

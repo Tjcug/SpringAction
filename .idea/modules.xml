@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-IOC-XML/spring-IOC-XML.iml" filepath="$PROJECT_DIR$/spring-IOC-XML/spring-IOC-XML.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-MVC/spring-MVC.iml" filepath="$PROJECT_DIR$/spring-MVC/spring-MVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-Test/spring-Test.iml" filepath="$PROJECT_DIR$/spring-Test/spring-Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-Transaction/spring-Transaction.iml" filepath="$PROJECT_DIR$/spring-Transaction/spring-Transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-mybatis/spring-mybatis.iml" filepath="$PROJECT_DIR$/spring-mybatis/spring-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springAction.iml" filepath="$PROJECT_DIR$/springAction.iml" />
     </modules>
