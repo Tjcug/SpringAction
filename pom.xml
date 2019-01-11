@@ -15,6 +15,7 @@
     <module>spring-IOC-Java</module>
     <module>spring-AOP-Schema</module>
     <module>spring-AOP-Aspect</module>
+      <module>spring-AOP-Annotation</module>
   </modules>
 
   <name>springAction</name>
