@@ -22,6 +22,8 @@ public class AirportServiceImpl implements AirportService {
     public List<Airport> findAllAirport() {
         List<Airport> airports2 = airPortMapper.selAll();
         List<Airport> airports1 = airPortMapper.selAll();
+        airPortMapper.insertAirport(new Airport("黄花机场","北京"));
+        int i=1/0;
         airports2.addAll(airports1);
         return airports2;
     }

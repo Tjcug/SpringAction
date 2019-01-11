@@ -22,4 +22,11 @@ public class AirPortMapperTest {
         airPortMapper.insertAirport(new Airport("黄花机场","北京"));
     }
 
+    @Test
+    public void findUsers(){
+        for (Airport airport : airPortMapper.selAll()) {
+            System.out.println(airport);
+        }
+        ;
+    }
 }

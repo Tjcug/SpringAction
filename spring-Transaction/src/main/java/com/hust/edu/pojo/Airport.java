@@ -10,21 +10,32 @@ public class Airport {
 		this.cityName = cityName;
 	}
 
+	public Airport(int id, String portName, String cityName) {
+		this.id = id;
+		this.portName = portName;
+		this.cityName = cityName;
+	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getPortName() {
 		return portName;
 	}
+
 	public void setPortName(String portName) {
 		this.portName = portName;
 	}
+
 	public String getCityName() {
 		return cityName;
 	}
+
 	public void setCityName(String cityName) {
 		this.cityName = cityName;
 	}

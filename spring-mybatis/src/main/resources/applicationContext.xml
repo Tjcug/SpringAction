@@ -11,14 +11,28 @@
     http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-2.5.xsd " >
 
     <!--定义可以通过注解的形式扫描包-->
-    <context:component-scan base-package="com.hust"/>
+    <context:component-scan base-package="com.hust.edu"/>
+
+    <!-- 加载配置文件，支持xml的方式-->
+    <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="locations">
+            <array>
+                <value>classpath:jdbc.properties</value>
+            </array>
+        </property>
+    </bean>
 
     <!--数据源获取数据库连接-->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="url" value="jdbc:mysql://localhost:3306/ssm"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="123456"></property>
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${driverClassName}">
+        </property>
+        <property name="url" value="${url}">
+        </property>
+        <property name="username" value="${username}">
+        </property>
+        <property name="password" value="${password}">
+        </property>
     </bean>
 
     <!--使用工厂设计模式创建sqlSession-->
@@ -31,7 +45,7 @@
     <!--扫描相当于myabatis.xml中mappers下的package标签-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.hust.edu.mapper"></property>
-        <property name="sqlSessionFactory" ref="sqlSessionFactoryBean"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"></property>
     </bean>
 
     <!-- 加载配置文件，支持注解的方法 -->
