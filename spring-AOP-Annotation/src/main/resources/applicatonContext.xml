@@ -13,5 +13,5 @@
     <context:component-scan base-package="com.hust"/>
 
     <!--proxy-target-clas 如果为true使用cglib动态代理 false使用JDK动态代理-->
-    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <aop:aspectj-autoproxy proxy-target-class="false"/>
 </beans>

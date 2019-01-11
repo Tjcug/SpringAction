@@ -11,6 +11,7 @@
         <module name="spring-AOP-Schema" />
         <module name="spring-IOC-Java" />
         <module name="spring-IOC-XML" />
+        <module name="spring-MVC" />
         <module name="spring-mybatis" />
         <module name="spring-Test" />
       </profile>
@@ -23,6 +24,7 @@
       <module name="spring-IOC" target="1.7" />
       <module name="spring-IOC-Java" target="1.7" />
       <module name="spring-IOC-XML" target="1.7" />
+      <module name="spring-MVC" target="1.7" />
       <module name="spring-mybatis" target="1.7" />
       <module name="spring-Test" target="1.7" />
       <module name="springAction" target="1.8" />

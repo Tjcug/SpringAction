@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-AOP-Schema/spring-AOP-Schema.iml" filepath="$PROJECT_DIR$/spring-AOP-Schema/spring-AOP-Schema.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-IOC-Java/spring-IOC-Java.iml" filepath="$PROJECT_DIR$/spring-IOC-Java/spring-IOC-Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-IOC-XML/spring-IOC-XML.iml" filepath="$PROJECT_DIR$/spring-IOC-XML/spring-IOC-XML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-MVC/spring-MVC.iml" filepath="$PROJECT_DIR$/spring-MVC/spring-MVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-Test/spring-Test.iml" filepath="$PROJECT_DIR$/spring-Test/spring-Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-mybatis/spring-mybatis.iml" filepath="$PROJECT_DIR$/spring-mybatis/spring-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springAction.iml" filepath="$PROJECT_DIR$/springAction.iml" />
