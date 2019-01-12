@@ -29,4 +29,15 @@ public class AirportController {
         System.out.println(allAirport);
         return gson.toJson(allAirport);
     }
+
+    @RequestMapping(value = "/airport/insertAirports",
+            produces = "application/json;charset=UTF-8")
+    @ResponseBody()
+    public String insertAirports(){
+        Airport airport = new Airport("黄花机场", "北京");
+        int result = airportService.insertAirport(airport);
+        System.out.println("result: "+result);
+        return gson.toJson(result);
+    }
+
 }

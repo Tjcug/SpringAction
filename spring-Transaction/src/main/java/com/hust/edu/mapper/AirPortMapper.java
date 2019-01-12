@@ -1,10 +1,7 @@
 package com.hust.edu.mapper;
 
 import com.hust.edu.pojo.Airport;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectKey;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,6 +11,7 @@ import java.util.List;
  * Created by MasterTj on 2019/1/10.
  */
 @Repository
+@Mapper
 public interface AirPortMapper {
     @Select("select * from airport")
     public List<Airport> selAll();

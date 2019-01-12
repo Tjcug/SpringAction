@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/../spring-mybatis" charset="UTF-8" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-AOP-Annotation" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-AOP-Aspect" charset="UTF-8" />
@@ -11,13 +10,13 @@
     <file url="file://$PROJECT_DIR$/spring-MVC" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-Test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-Transaction" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-Transaction/src/main/java/com/hust/edu/mapper/AirplaneMapper.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/spring-Transaction/src/main/java/com/hust/edu/pojo/Airplane.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/spring-Transaction/src/main/java/com/hust/edu/pojo/Airport.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-Transaction/src/main/java/com/hust/edu/mapper/AirplaneMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-Transaction/src/main/java/com/hust/edu/pojo/Airplane.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-Transaction/src/main/java/com/hust/edu/pojo/Airport.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-Transaction/src/main/resources/mapper/AirplaneMapper.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/spring-mybatis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java/com/hust/edu/mapper/AirplaneMapper.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java/com/hust/edu/pojo" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java/com/hust/edu/mapper/AirplaneMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java/com/hust/edu/pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/resources/mapper/AirplaneMapper.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

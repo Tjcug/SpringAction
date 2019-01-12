@@ -19,7 +19,9 @@ public class AirPortMapperTest {
 
     @Test
     public void insertAirport() throws Exception {
-        airPortMapper.insertAirport(new Airport("黄花机场","北京"));
+        Airport airport = new Airport("黄花机场", "北京");
+        System.out.println(airport);
+        airPortMapper.insertAirport(airport);
     }
 
     @Test
@@ -27,6 +29,5 @@ public class AirPortMapperTest {
         for (Airport airport : airPortMapper.selAll()) {
             System.out.println(airport);
         }
-        ;
     }
 }

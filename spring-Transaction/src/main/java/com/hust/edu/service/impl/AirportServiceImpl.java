@@ -22,9 +22,16 @@ public class AirportServiceImpl implements AirportService {
     public List<Airport> findAllAirport() {
         List<Airport> airports2 = airPortMapper.selAll();
         List<Airport> airports1 = airPortMapper.selAll();
-        airPortMapper.insertAirport(new Airport("黄花机场","北京"));
-        int i=1/0;
+
         airports2.addAll(airports1);
         return airports2;
+    }
+
+    @Override
+    public int insertAirport(Airport airport){
+        int result = airPortMapper.insertAirport(new Airport("黄花机场", "北京"));
+        //抛出异常,事务加载不成功
+        int i=1/0;
+        return result;
     }
 }

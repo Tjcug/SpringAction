@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface AirportService {
     public List<Airport> findAllAirport();
+    public int insertAirport(Airport airport);
 }
